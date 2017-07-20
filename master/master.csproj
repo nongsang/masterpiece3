@@ -190,8 +190,10 @@
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\Scripts\RoadBlockGenerator.cs" />
+    <Compile Include="Assets\Scripts\Back.cs" />
     <Compile Include="Assets\Scripts\BadEnd.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Credit.cs" />
     <Compile Include="Assets\Scripts\Died.cs" />
     <Compile Include="Assets\Scripts\Earthquake_Addforce.cs" />
     <Compile Include="Assets\Scripts\EleDoorLeft.cs" />
@@ -210,6 +212,7 @@
     <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\Scripts\NPC2.cs" />
     <Compile Include="Assets\Scripts\PartitionCtrl.cs" />
+    <Compile Include="Assets\Scripts\START.cs" />
     <Compile Include="Assets\Scripts\breakerCover.cs" />
     <Compile Include="Assets\Scripts\breakerSwitch.cs" />
     <Compile Include="Assets\Scripts\breakerSwitch1.cs" />
