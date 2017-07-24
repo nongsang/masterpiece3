@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class START : MonoBehaviour {
 
-    MeshRenderer mesh;
+    GameObject canvas;
+    GameObject Event;
+    GameObject[] objects;
     bool enable = false;
 
     private void Awake()
     {
-        mesh = GetComponent<MeshRenderer>();
+        canvas = GameObject.Find("Canvas");
+        Event = GameObject.Find("EventStart");
+        objects = GameObject.FindGameObjectsWithTag("OBJECT");
     }
 
     // Use this for initialization
@@ -20,7 +24,12 @@ public class START : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (enable)
-            mesh.enabled = false;
+        {
+            Destroy(canvas);
+            Event.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+            foreach (GameObject o in objects)
+                o.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     void OnMouseDown()

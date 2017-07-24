@@ -76,12 +76,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="master.Plugins.csproj">
@@ -192,8 +186,8 @@
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\Scripts\RoadBlockGenerator.cs" />
     <Compile Include="Assets\Scripts\Back.cs" />
     <Compile Include="Assets\Scripts\BadEnd.cs" />
+    <Compile Include="Assets\Scripts\CREDIT.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
-    <Compile Include="Assets\Scripts\Credit.cs" />
     <Compile Include="Assets\Scripts\Died.cs" />
     <Compile Include="Assets\Scripts\Earthquake_Addforce.cs" />
     <Compile Include="Assets\Scripts\EleDoorLeft.cs" />

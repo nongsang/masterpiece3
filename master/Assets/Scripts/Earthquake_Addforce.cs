@@ -25,7 +25,7 @@ public class Earthquake_Addforce : MonoBehaviour {
 
         //GetComponent<Rigidbody>().AddForce(Random.insideUnitSphere * speed);
     }
-    public void Switch()
+    public void Earthquake()
     {
 		speed = 400.0f;
         //int Randomnum = Random.Range(0,2);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GasValve : MonoBehaviour {
 
     GameObject obj;
+    bool enable = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,12 @@ public class GasValve : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        obj.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+        if(enable)
+            obj.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+    }
+
+    void Switch()
+    {
+        enable = true;
     }
 }

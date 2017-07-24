@@ -42,20 +42,14 @@ public class CameraShake : MonoBehaviour {
 			if (shakeAmount == 0.7f)
 			{
 				foreach (GameObject o in gO)
-				{
-					o.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-				}
+					o.SendMessage("Earthquake", SendMessageOptions.DontRequireReceiver);
 				foreach (GameObject d in gD)
-				{
-					d.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-				}
+					d.SendMessage("Earthquake", SendMessageOptions.DontRequireReceiver);
 			}
 			else
 			{
 				foreach (GameObject o in gO)
-				{
 					o.SendMessage("EStart", SendMessageOptions.DontRequireReceiver);
-				}
 			}
             shake -= Time.deltaTime * decreaseFactor;
         }

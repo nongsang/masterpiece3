@@ -7,11 +7,11 @@ public class EventStart : MonoBehaviour {
 	GameObject Camera;
 	GameObject NPC1;
 	GameObject[] NPC2;
-	BoxCollider tr;
+	BoxCollider bc;
 
     private void Awake()
     {
-        tr = GetComponent<BoxCollider>();
+        bc = GetComponent<BoxCollider>();
         Camera = GameObject.Find("FirstPersonCharacter");
         NPC1 = GameObject.FindGameObjectWithTag("NPC1");
         NPC2 = GameObject.FindGameObjectsWithTag("NPC2");
@@ -35,7 +35,7 @@ public class EventStart : MonoBehaviour {
 		if (other.tag == "Player")
 		{
 			StartCoroutine(EStart());
-			tr.enabled = false;
+			bc.enabled = false;
 		}
 	}
 
@@ -48,4 +48,9 @@ public class EventStart : MonoBehaviour {
 		foreach (GameObject npc2 in NPC2)
 			npc2.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 	}
+
+    void Switch()
+    {
+        bc.enabled = true;
+    }
 }

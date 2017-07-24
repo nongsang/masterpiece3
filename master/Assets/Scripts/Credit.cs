@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Credit : MonoBehaviour {
+public class CREDIT : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    GameObject start, credit;
+
+    private void Awake()
+    {
+        start = GameObject.Find("START");
+        credit = GameObject.Find("CREDIT");
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

@@ -5,7 +5,7 @@ using UnityEngine;
 public class breakerSwitch3 : MonoBehaviour
 {
 
-    bool setRotation;
+    bool setRotation, enable = false;
     GameObject ES;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class breakerSwitch3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (setRotation)
+        if (setRotation && enable)
         {
             transform.rotation *= Quaternion.Euler(Vector3.back * 200.0f * Time.deltaTime);
             //Debug.Log(transform.rotation.z);
@@ -31,5 +31,9 @@ public class breakerSwitch3 : MonoBehaviour
     private void OnMouseDown()
     {
         setRotation = true;
+    }
+    void Switch()
+    {
+        enable = true;
     }
 }
