@@ -76,6 +76,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="master.Plugins.csproj">
@@ -184,7 +190,7 @@
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\RK.Team Assets\Modular Road Block\Scripts\RoadBlockGenerator.cs" />
-    <Compile Include="Assets\Scripts\Back.cs" />
+    <Compile Include="Assets\Scripts\BACK.cs" />
     <Compile Include="Assets\Scripts\BadEnd.cs" />
     <Compile Include="Assets\Scripts\CREDIT.cs" />
     <Compile Include="Assets\Scripts\CameraShake.cs" />
@@ -202,6 +208,8 @@
     <Compile Include="Assets\Scripts\FadeInOut.cs" />
     <Compile Include="Assets\Scripts\GasPipe.cs" />
     <Compile Include="Assets\Scripts\GasValve.cs" />
+    <Compile Include="Assets\Scripts\GoBlack.cs" />
+    <Compile Include="Assets\Scripts\InteractionTest.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\Scripts\NPC2.cs" />

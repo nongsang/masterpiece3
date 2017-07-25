@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class START : MonoBehaviour {
 
+    GameObject start;
     GameObject canvas;
     GameObject Event;
     GameObject[] objects;
@@ -11,6 +12,7 @@ public class START : MonoBehaviour {
 
     private void Awake()
     {
+        start = GameObject.Find("START");
         canvas = GameObject.Find("Canvas");
         Event = GameObject.Find("EventStart");
         objects = GameObject.FindGameObjectsWithTag("OBJECT");
@@ -35,5 +37,11 @@ public class START : MonoBehaviour {
     void OnMouseDown()
     {
         enable = true;
+    }
+
+    void Switch()
+    {
+        start.GetComponent<MeshRenderer>().enabled = true;
+        start.GetComponent<MeshCollider>().enabled = true;
     }
 }
