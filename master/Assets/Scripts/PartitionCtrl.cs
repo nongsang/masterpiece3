@@ -20,4 +20,9 @@ public class PartitionCtrl : MonoBehaviour {
 	void Update () {
 
 	}
+
+    void Earthquake()
+    {
+        partition.isKinematic = false;
+    }
 }
