@@ -13,12 +13,17 @@ public class EventSwitch : MonoBehaviour {
     bool valve;
 
     private GameObject elevator;
-    private GameObject stair;
+    private GameObject Exit;
+    private GameObject Player;
+    private GameObject goblack;
 
     private void Awake()
     {
         Camera = GameObject.Find("FirstPersonCharacter");
         elevator = GameObject.Find("ElevatorButton");
+        Exit = GameObject.Find("ExitTarget");
+        Player = GameObject.Find("FPSController");
+        goblack = GameObject.Find("GoBlack");
     }
 
     // Use this for initialization
@@ -41,6 +46,10 @@ public class EventSwitch : MonoBehaviour {
         {
             Camera.SendMessage("Switch",SendMessageOptions.DontRequireReceiver);
             elevator.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
+            Exit.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+            Player.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+            goblack.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+
             //Oj.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             //foreach (GameObject o in Oj)
             //{
