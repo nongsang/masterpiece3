@@ -50,6 +50,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public Image imgHPbar;
 
         bool canWalk = true;
+        bool crouched = false;
 
         // Use this for initialization
         private void Start()
@@ -118,9 +119,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                                    m_CharacterController.height / 2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
                 desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
+
+
                 m_MoveDir.x = desiredMove.x * speed;
                 m_MoveDir.z = desiredMove.z * speed;
-
 
                 if (m_CharacterController.isGrounded)
                 {
