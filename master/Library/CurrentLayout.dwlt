@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 563}
   m_MaxSize: {x: 22012, y: 12063}
   vertical: 0
-  controlID: 9
+  controlID: 103
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 563}
   m_MaxSize: {x: 4002, y: 12063}
   vertical: 1
-  controlID: 10
+  controlID: 70
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,14 +390,14 @@ MonoBehaviour:
     width: 1024
     height: 314
   m_SceneLighting: 1
-  lastFramingTime: 5928.11100236781
+  lastFramingTime: 9266.600818066794
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 467.3671, y: 238.10779, z: 60.33374}
+    m_Target: {x: 15.241768, y: 0.8604288, z: 11.858166}
     speed: 2
-    m_Value: {x: 467.3671, y: 238.10779, z: 60.33374}
+    m_Value: {x: 15.241768, y: 0.8604288, z: 11.858166}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -420,18 +420,18 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.009313929, y: 0.0059963763, z: -0.0000554332, w: 0.9999387}
+    m_Target: {x: -0.11671721, y: -0.86093754, z: 0.22885764, w: -0.4390759}
     speed: 2
-    m_Value: {x: -0.009313929, y: -0.0059963767, z: 0.000055433204, w: -0.9999388}
+    m_Value: {x: 0.116717204, y: 0.86093754, z: -0.22885764, w: 0.4390759}
   m_Size:
-    m_Target: 268.6007
+    m_Target: 8.783291
     speed: 2
-    m_Value: 268.6007
+    m_Value: 8.783291
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.08704701, y: 0.908633, z: -0.2386199, w: -0.33146587}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -491,9 +491,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76e8ffff
-    m_LastClickedID: -6026
-    m_ExpandedIDs: e8efffffecefffffdcfbffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: eccbffffeecbfffff2cbffffe6efffffe8efffffdcfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,7 +552,8 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/GoogleVR/Textures
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -564,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 12330000
     m_LastClickedID: 13074
-    m_ExpandedIDs: 000000002627000092270000962700009c270000fe2700002429000066290000f0290000902a0000b02a0000d42a0000e22a0000482d0000a62d0000c82d0000f82d0000342e00004e2e0000862e0000882e0000c62e0000142f00009a2f0000ba2f00001030000096300000ac300000da30000038310000583100005c3400007e340000e03400000c3500002c3500004e350000ac390000b0390000d43900007a3a00008e3a0000c63b0000f83b0000684f0000
+    m_ExpandedIDs: 00000000f2280000842b00008e2b0000fc2b0000302c0000382d00004a2d0000d62d0000ca2e00002a2f0000ce2f0000f42f000040300000ac300000b0300000b63000001a31000040320000823200000e330000ae330000ce3300000034000068360000c6360000e836000018370000543700006e370000a6370000a8370000e6370000bc380000dc38000032390000b8390000ce390000fc3900005a3a00007a3a0000803d0000503e0000d0420000d4420000f84200009e430000ea4400001c450000d8580000da580000dc580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,10 +590,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 4216}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002627000092270000962700009c270000fe2700002429000066290000f0290000902a0000b02a0000d42a0000e22a0000482d0000a62d0000c82d0000f82d0000342e00004e2e0000862e0000882e0000c62e0000142f00009a2f0000ba2f00001030000096300000ac300000da30000038310000583100005c3400007e340000e03400000c3500002c3500004e350000ac390000b0390000d43900007a3a00008e3a0000c63b0000f83b0000684f0000
+    m_ExpandedIDs: 00000000f2280000842b00008e2b0000fc2b0000302c0000382d00004a2d0000d62d0000ca2e00002a2f0000ce2f0000f42f000040300000ac300000b63000001a31000040320000823200000e330000ae330000ce3300000034000068360000c6360000e836000018370000543700006e370000a6370000a8370000e6370000bc380000dc38000032390000b8390000ce390000fc3900005a3a00007a3a0000803d0000503e0000d0420000d4420000f84200009e430000ea4400001c450000d8580000da580000dc5800008474000090740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

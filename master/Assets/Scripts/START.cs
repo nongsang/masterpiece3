@@ -10,13 +10,13 @@ public class START : MonoBehaviour {
     GameObject[] objects;
     bool enable = false;
 
-    private void Awake()
+	private void Awake()
     {
         start = GameObject.Find("START");
         canvas = GameObject.Find("Canvas");
         Event = GameObject.Find("EventStart");
         objects = GameObject.FindGameObjectsWithTag("OBJECT");
-    }
+	}
 
     // Use this for initialization
     void Start () {
@@ -41,7 +41,7 @@ public class START : MonoBehaviour {
 
     void Switch()
     {
-        start.GetComponent<MeshRenderer>().enabled = true;
-        start.GetComponent<MeshCollider>().enabled = true;
+        //start.GetComponent<MeshRenderer>().enabled = true;
+        //start.GetComponent<MeshCollider>().enabled = true;
     }
 }

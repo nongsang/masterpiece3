@@ -1,2 +1,50 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=1879 outsize=1143 ok=1
+Cmd: preprocess
+  insize=1901 outsize=1056 ok=1
+Cmd: preprocess
+  insize=1838 outsize=917 ok=1
+Cmd: preprocess
+  insize=3186 outsize=1779 ok=1
+Cmd: preprocess
+  insize=1203 outsize=1203 ok=1
+Cmd: preprocess
+  insize=1696 outsize=1027 ok=1
+Cmd: preprocess
+  insize=1549 outsize=863 ok=1
+Cmd: preprocess
+  insize=1963 outsize=1054 ok=1
+Cmd: preprocess
+  insize=2092 outsize=1302 ok=1
+Cmd: preprocess
+  insize=1750 outsize=871 ok=1
+Cmd: preprocess
+  insize=839 outsize=836 ok=1
+Cmd: preprocess
+  insize=1181 outsize=1181 ok=1
+Cmd: preprocess
+  insize=3276 outsize=1359 ok=1
+Cmd: preprocess
+  insize=2076 outsize=1056 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1262 outsize=622 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1262 outsize=250 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=1879 outsize=1143 ok=1
+Cmd: preprocess
+  insize=1901 outsize=1056 ok=1
+Cmd: preprocess
+  insize=3186 outsize=1779 ok=1
+Cmd: preprocess
+  insize=1203 outsize=1203 ok=1
+Cmd: preprocess
+  insize=1696 outsize=1027 ok=1
+Cmd: preprocess
+  insize=2092 outsize=1302 ok=1
+Cmd: preprocess
+  insize=1750 outsize=871 ok=1
+Cmd: preprocess
+  insize=1181 outsize=1181 ok=1
