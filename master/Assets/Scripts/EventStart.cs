@@ -12,7 +12,7 @@ public class EventStart : MonoBehaviour {
     private void Awake()
     {
         bc = GetComponent<BoxCollider>();
-        Camera = GameObject.Find("FirstPersonCharacter");
+        Camera = GameObject.Find("Main Camera");
         NPC1 = GameObject.FindGameObjectWithTag("NPC1");
         NPC2 = GameObject.FindGameObjectsWithTag("NPC2");
     }
