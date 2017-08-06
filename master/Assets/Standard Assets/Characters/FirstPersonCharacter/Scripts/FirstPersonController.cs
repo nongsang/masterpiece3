@@ -45,17 +45,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
-        public int HP = 100;
-        private int InitHP;
-        public Image imgHPbar;
-
         bool canWalk = true;
         bool crouched = false;
 
         // Use this for initialization
         private void Start()
         {
-            InitHP = HP;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;

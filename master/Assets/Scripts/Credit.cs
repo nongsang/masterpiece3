@@ -24,12 +24,12 @@ public class CREDIT : MonoBehaviour {
 	}
     private void OnMouseDown()
     {
-        start.GetComponent<MeshRenderer>().enabled = false;
-        start.GetComponent<MeshCollider>().enabled = false;
-        credit.GetComponent<MeshRenderer>().enabled = false;
-        credit.GetComponent<MeshCollider>().enabled = false;
-        back.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-    }
+		start.GetComponent<MeshRenderer>().enabled = false;
+		start.GetComponent<MeshCollider>().enabled = false;
+		credit.GetComponent<MeshRenderer>().enabled = false;
+		credit.GetComponent<MeshCollider>().enabled = false;
+		back.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+	}
 
     void Switch()
     {
