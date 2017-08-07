@@ -34,12 +34,12 @@ public class START : MonoBehaviour {
         }
     }
 
-    void OnMouseDown()
-    {
-        enable = true;
-    }
+	void Enable()
+	{
+		enable = true;
+	}
 
-    void Switch()
+	void Switch()
     {
         start.GetComponent<MeshRenderer>().enabled = true;
         start.GetComponent<MeshCollider>().enabled = true;

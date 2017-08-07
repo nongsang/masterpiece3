@@ -29,7 +29,7 @@ public class BACK : MonoBehaviour {
         back.GetComponent<MeshCollider>().enabled = true;
     }
 
-    private void OnMouseDown()
+    private void Enable()
     {
         back.GetComponent<MeshRenderer>().enabled = false;
         back.GetComponent<MeshCollider>().enabled = false;

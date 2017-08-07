@@ -13,6 +13,7 @@ public class CameraShake : MonoBehaviour {
     public float decreaseFactor = 1.0f;
 
     Vector3 originalPos;
+	Transform tr;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class CameraShake : MonoBehaviour {
         }
         gO = GameObject.FindGameObjectsWithTag("OBJECT");
 		gD = GameObject.FindGameObjectsWithTag("DESK");
+		tr = GetComponent<Transform>();
     }
 
     void OnEnable()
@@ -36,7 +38,26 @@ public class CameraShake : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (shake > 0)
+		Debug.DrawRay(tr.position, tr.forward * 3.0f, Color.green);
+		if (Input.GetButtonDown("Fire1"))
+		{
+			RaycastHit hit;
+
+			if (Physics.Raycast(tr.position, tr.forward, out hit, 5.0f))
+			{
+				if (hit.collider.name == "START")
+					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
+				else if(hit.collider.name == "CREDIT")
+					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "BACK")
+					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "GasPipe")
+					hit.collider.gameObject.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+				//else if (hit.collider.name == "GasPipe")
+				//	hit.collider.gameObject.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+			}
+		}
+		if (shake > 0)
         {
             camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 			if (shakeAmount == 0.7f)

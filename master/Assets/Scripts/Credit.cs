@@ -22,7 +22,7 @@ public class CREDIT : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnMouseDown()
+    private void Enable()
     {
 		start.GetComponent<MeshRenderer>().enabled = false;
 		start.GetComponent<MeshCollider>().enabled = false;
