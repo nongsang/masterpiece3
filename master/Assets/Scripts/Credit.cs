@@ -24,10 +24,10 @@ public class CREDIT : MonoBehaviour {
 	}
     private void Enable()
     {
-		start.GetComponent<MeshRenderer>().enabled = false;
-		start.GetComponent<MeshCollider>().enabled = false;
-		credit.GetComponent<MeshRenderer>().enabled = false;
-		credit.GetComponent<MeshCollider>().enabled = false;
+		start.GetComponent<SpriteRenderer>().enabled = false;
+		start.GetComponent<BoxCollider>().enabled = false;
+		credit.GetComponent<SpriteRenderer>().enabled = false;
+		credit.GetComponent<BoxCollider>().enabled = false;
 		back.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 	}
 

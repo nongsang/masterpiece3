@@ -41,7 +41,7 @@ public class START : MonoBehaviour {
 
 	void Switch()
     {
-        start.GetComponent<MeshRenderer>().enabled = true;
-        start.GetComponent<MeshCollider>().enabled = true;
+        start.GetComponent<SpriteRenderer>().enabled = true;
+        start.GetComponent<BoxCollider>().enabled = true;
     }
 }

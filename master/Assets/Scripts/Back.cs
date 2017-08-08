@@ -25,14 +25,14 @@ public class BACK : MonoBehaviour {
 
     void Switch()
     {
-        back.GetComponent<MeshRenderer>().enabled = true;
-        back.GetComponent<MeshCollider>().enabled = true;
+        back.GetComponent<SpriteRenderer>().enabled = true;
+        back.GetComponent<BoxCollider>().enabled = true;
     }
 
     private void Enable()
     {
-        back.GetComponent<MeshRenderer>().enabled = false;
-        back.GetComponent<MeshCollider>().enabled = false;
+        back.GetComponent<SpriteRenderer>().enabled = false;
+        back.GetComponent<BoxCollider>().enabled = false;
         start.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
         credit.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
     }
