@@ -28,15 +28,15 @@ public class EventStart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//bc.enabled = false;
 	}
 
-	private void OnTriggerStay(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player")
 		{
-			StartCoroutine(EStart());
 			bc.enabled = false;
+			StartCoroutine(EStart());
 		}
 	}
 

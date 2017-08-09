@@ -43,7 +43,7 @@ public class CameraShake : MonoBehaviour {
 		{
 			RaycastHit hit;
 
-			if (Physics.Raycast(tr.position, tr.forward, out hit, 5.0f))
+			if (Physics.Raycast(tr.position, tr.forward, out hit, 10.0f))
 			{
 				if (hit.collider.name == "START")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
@@ -53,8 +53,14 @@ public class CameraShake : MonoBehaviour {
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "GasPipe")
 					hit.collider.gameObject.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
-				//else if (hit.collider.name == "GasPipe")
-				//	hit.collider.gameObject.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "Cover")
+					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "breakerSwitch1")
+					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "breakerSwitch2")
+					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "breakerSwitch3")
+					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		if (shake > 0)

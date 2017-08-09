@@ -33,7 +33,7 @@ public class CREDIT : MonoBehaviour {
 
     void Switch()
     {
-        credit.GetComponent<MeshRenderer>().enabled = true;
-        credit.GetComponent<MeshCollider>().enabled = true;
+        credit.GetComponent<SpriteRenderer>().enabled = true;
+        credit.GetComponent<BoxCollider>().enabled = true;
     }
 }

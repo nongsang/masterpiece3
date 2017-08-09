@@ -25,7 +25,7 @@ public class breakerSwitch1 : MonoBehaviour {
         }
 	}
 
-    private void OnMouseDown()
+    private void SetRotate()
     {
         setRotation = true;
     }

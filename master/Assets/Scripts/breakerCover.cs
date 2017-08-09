@@ -25,7 +25,7 @@ public class breakerCover : MonoBehaviour {
         }
 	}
 
-    private void OnMouseDown()
+    private void SetRotate()
     {
         setRotation = true;
     }
