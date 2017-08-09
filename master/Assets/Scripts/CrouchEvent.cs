@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrouchEvent : MonoBehaviour {
 
 	Transform Player;
+	bool enable = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +19,8 @@ public class CrouchEvent : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Player")
-			Player.localScale = new Vector3(1, 0.8f, 1);
+		if (other.tag == "Player" && enable)
+				Player.localScale = new Vector3(1, 0.8f, 1);
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -28,5 +29,10 @@ public class CrouchEvent : MonoBehaviour {
 		{
 			Player.localScale = new Vector3(1, 1.6f, 1);
 		}
+	}
+
+	private void Switch()
+	{
+		enable = true;
 	}
 }

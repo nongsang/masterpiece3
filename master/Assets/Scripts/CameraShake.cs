@@ -69,9 +69,14 @@ public class CameraShake : MonoBehaviour {
 			if (shakeAmount == 0.7f)
 			{
 				foreach (GameObject o in gO)
+				{
 					o.SendMessage("Earthquake", SendMessageOptions.DontRequireReceiver);
+				}
 				foreach (GameObject d in gD)
+				{
+					d.GetComponent<Rigidbody>().isKinematic = false;
 					d.SendMessage("Earthquake", SendMessageOptions.DontRequireReceiver);
+				}
 			}
 			else
 			{
