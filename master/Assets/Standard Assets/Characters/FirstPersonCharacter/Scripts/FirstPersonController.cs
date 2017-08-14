@@ -282,7 +282,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		void OnDamage()
 		{
-			SpriHPbar.localScale = new Vector3(hp - 0.6f, 2.5f, 1);
+			Invoke("Damaged", 2.0f);
+		}
+
+		void Damaged()
+		{
+			SpriHPbar.localScale = new Vector3(hp -= 0.6f, 2.5f, 1);
 		}
     }
 }
