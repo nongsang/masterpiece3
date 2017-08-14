@@ -44,9 +44,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+		public Transform SpriHPbar;
 
         bool canWalk = true;
         bool crouched = false;
+
+		float hp = 3.0f;
 
         // Use this for initialization
         private void Start()
@@ -87,9 +90,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
 
                 m_PreviouslyGrounded = m_CharacterController.isGrounded;
-
-
-        }
+		}
 
 
         private void PlayLandingSound()
@@ -278,5 +279,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             canWalk = false;
         }
+
+		void OnDamage()
+		{
+			SpriHPbar.localScale = new Vector3(hp - 0.6f, 2.5f, 1);
+		}
     }
 }
