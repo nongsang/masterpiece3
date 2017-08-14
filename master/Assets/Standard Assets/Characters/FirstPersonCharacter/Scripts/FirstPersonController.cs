@@ -48,11 +48,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool canWalk = true;
         bool crouched = false;
 
-		private float memhp = 3.0f;
-		public Transform SpriHpBar;
-
-		// Use this for initialization
-		private void Start()
+        // Use this for initialization
+        private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
@@ -64,7 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-		}
+        }
 
 
         // Update is called once per frame
@@ -90,7 +87,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
 
                 m_PreviouslyGrounded = m_CharacterController.isGrounded;
-		}
+
+
+        }
 
 
         private void PlayLandingSound()
@@ -279,11 +278,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             canWalk = false;
         }
-
-		void OnDamage()
-		{
-			memhp -= 0.3f;
-			SpriHpBar.localScale = new Vector3(memhp, 2.5f, 0);
-		}
     }
 }

@@ -33,13 +33,15 @@ public class GoBlack : MonoBehaviour
     void Black()
     {
         time -= 1.0f * Time.deltaTime;
-        if (time > 2.0f && time < 5.5f)
-            goBlack.color = new Color(0, 0, 0, fade);
-        else if (time <= 2.0f)
-        {
-            fade -= 1.0f * Time.deltaTime;
-            goBlack.color = new Color(0, 0, 0, fade);
-        }
+		if (time > 2.0f && time < 5.5f)
+			goBlack.color = new Color(0, 0, 0, fade);
+		else if (time <= 2.0f)
+		{
+			fade -= 1.0f * Time.deltaTime;
+			goBlack.color = new Color(0, 0, 0, fade);
+		}
+		else if (time <= 0.0f)
+			time = 0.0f;
     }
 
     void Switch()
