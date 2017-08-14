@@ -48,9 +48,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool canWalk = true;
         bool crouched = false;
 
-		public int hp = 100;
 		private float memhp = 3.0f;
-		public SpriteRenderer SpriHpBar;
+		public Transform SpriHpBar;
 
 		// Use this for initialization
 		private void Start()
@@ -91,9 +90,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
 
                 m_PreviouslyGrounded = m_CharacterController.isGrounded;
-
-
-        }
+		}
 
 
         private void PlayLandingSound()
@@ -285,8 +282,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		void OnDamage()
 		{
-			hp -= 20;
-			SpriHpBar.size.Set(memhp, 2.5f);
+			memhp -= 0.3f;
+			SpriHpBar.localScale = new Vector3(memhp, 2.5f, 0);
 		}
     }
 }

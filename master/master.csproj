@@ -322,6 +322,7 @@
     <Compile Include="Assets\Scripts\GasValve.cs" />
     <Compile Include="Assets\Scripts\Give.cs" />
     <Compile Include="Assets\Scripts\GoBlack.cs" />
+    <Compile Include="Assets\Scripts\Hurt.cs" />
     <Compile Include="Assets\Scripts\InteractionTest.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\NPC1.cs" />

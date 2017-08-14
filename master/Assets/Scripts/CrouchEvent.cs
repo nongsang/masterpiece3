@@ -35,4 +35,9 @@ public class CrouchEvent : MonoBehaviour {
 	{
 		enable = true;
 	}
+
+	private void TurnDown()
+	{
+		enable = false;
+	}
 }
