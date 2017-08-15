@@ -326,6 +326,7 @@
     <Compile Include="Assets\Scripts\EventSwitch.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\FadeInOut.cs" />
+    <Compile Include="Assets\Scripts\FirstAid.cs" />
     <Compile Include="Assets\Scripts\GasPipe.cs" />
     <Compile Include="Assets\Scripts\GasValve.cs" />
     <Compile Include="Assets\Scripts\Give.cs" />

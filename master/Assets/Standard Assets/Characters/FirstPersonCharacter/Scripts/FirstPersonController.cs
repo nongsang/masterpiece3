@@ -50,8 +50,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool crouched = false;
 		bool isDamage = true;
 
-        // Use this for initialization
-        private void Start()
+		private void Awake()
+		{
+			DontDestroyOnLoad(transform.gameObject);
+		}
+
+		// Use this for initialization
+		private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;

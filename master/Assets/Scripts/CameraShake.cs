@@ -47,7 +47,7 @@ public class CameraShake : MonoBehaviour {
 			{
 				if (hit.collider.name == "START")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
-				else if(hit.collider.name == "CREDIT")
+				else if (hit.collider.name == "CREDIT")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "BACK")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
@@ -61,6 +61,8 @@ public class CameraShake : MonoBehaviour {
 					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "breakerSwitch3")
 					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "firstAidBox")
+					Destroy(hit.collider.gameObject);
 			}
 		}
 		if (shake > 0)
