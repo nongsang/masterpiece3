@@ -39,7 +39,7 @@ public class GoBlack : MonoBehaviour
 		else if (time <= 2.0f)
 		{
 			fade -= 1.0f * Time.deltaTime;
-			goBlack.color = new Color(0, 0, 0, 1);
+			goBlack.color = new Color(0, 0, 0, fade);
 		}
 		else if (time <= 0.0f)
 			time = 0.0f;

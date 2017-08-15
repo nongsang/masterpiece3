@@ -16,6 +16,7 @@ public class EventSwitch : MonoBehaviour {
     private GameObject Exit;
     private GameObject Player;
     private GameObject goblack;
+	public GameObject Damage;
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class EventSwitch : MonoBehaviour {
             Exit.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             Player.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             goblack.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+			Damage.SendMessage("SwitchDamage", SendMessageOptions.DontRequireReceiver);
 
             //Oj.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             //foreach (GameObject o in Oj)
