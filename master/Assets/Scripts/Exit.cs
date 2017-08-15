@@ -3,42 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Exit : MonoBehaviour {
+public class Exit : MonoBehaviour
+{
 
-    GameObject obj;
-    bool enable = false;
+	GameObject obj;
+	bool enable = false;
 
 	// Use this for initialization
-	void Start () {
-        obj = GetComponent<GameObject>();
+	void Start()
+	{
+		obj = GetComponent<GameObject>();
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+	{
+
 	}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "NPC1")
-        {
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "NPC1")
+		{
 
-            obj = GameObject.FindWithTag("NPC1").GetComponent<NPC1>().getGameObject();
-            GameObject.Destroy(obj);
-        }
-        else if(other.tag == "NPC2")
-        {
-            obj = GameObject.FindWithTag("NPC2").GetComponent<NPC2>().getGameObject();
-            GameObject.Destroy(obj);
-        }
-        else if(other.tag == "Player" && enable)
-        {
-            SceneManager.LoadScene("Road");
-        }
-    }
+			obj = GameObject.FindWithTag("NPC1").GetComponent<NPC1>().getGameObject();
+			GameObject.Destroy(obj);
+		}
+		else if (other.tag == "NPC2")
+		{
+			obj = GameObject.FindWithTag("NPC2").GetComponent<NPC2>().getGameObject();
+			GameObject.Destroy(obj);
+		}
+		else if (other.tag == "Player" && enable)
+		{
+			SceneManager.LoadScene("Road");
+			other.transform.position = new Vector3(-7.09f, 1.44f, -55.4f);
+		}
+	}
 
-    void Switch()
-    {
-        enable = true;
-    }
+	void Switch()
+	{
+		enable = true;
+	}
 }
