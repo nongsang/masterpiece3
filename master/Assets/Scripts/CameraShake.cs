@@ -8,7 +8,6 @@ public class CameraShake : MonoBehaviour {
     private GameObject[] gO;
 	private GameObject[] gD;
     public float shake = 0.0f;
-	private GameObject HUD;
 
     public float shakeAmount = 0.7f;
     public float decreaseFactor = 1.0f;
@@ -25,7 +24,6 @@ public class CameraShake : MonoBehaviour {
         gO = GameObject.FindGameObjectsWithTag("OBJECT");
 		gD = GameObject.FindGameObjectsWithTag("DESK");
 		tr = GetComponent<Transform>();
-		HUD = GameObject.Find("FPSController");
     }
 
     void OnEnable()
@@ -82,7 +80,6 @@ public class CameraShake : MonoBehaviour {
 			{
 				foreach (GameObject o in gO)
 					o.SendMessage("EStart", SendMessageOptions.DontRequireReceiver);
-				HUD.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
 			}
             shake -= Time.deltaTime * decreaseFactor;
         }

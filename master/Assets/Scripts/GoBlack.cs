@@ -7,6 +7,7 @@ public class GoBlack : MonoBehaviour
 {
 
     Image goBlack;
+	public Image die;
     private float fade = 1.0f;
     public float time = 6.0f;
 
@@ -38,14 +39,25 @@ public class GoBlack : MonoBehaviour
 		else if (time <= 2.0f)
 		{
 			fade -= 1.0f * Time.deltaTime;
-			goBlack.color = new Color(0, 0, 0, fade);
+			goBlack.color = new Color(0, 0, 0, 1);
 		}
 		else if (time <= 0.0f)
 			time = 0.0f;
     }
 
+	void Die()
+	{
+		goBlack.color = new Color(0, 0, 0, 1);
+		Invoke("ShowDie", 1);
+	}
+
     void Switch()
     {
         black = true;
     }
+
+	void ShowDie()
+	{
+		die.enabled = true;
+	}
 }

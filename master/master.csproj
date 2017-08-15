@@ -76,6 +76,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Google.ProtocolBuffers">
       <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
@@ -251,6 +257,7 @@
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\SepiaTone.cs" />
+    <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\StartDamage.cs" />
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
     <Compile Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Scripts\Tonemapping.cs" />
@@ -307,6 +314,7 @@
     <Compile Include="Assets\Scripts\Crouch.cs" />
     <Compile Include="Assets\Scripts\CrouchEvent.cs" />
     <Compile Include="Assets\Scripts\Died.cs" />
+    <Compile Include="Assets\Scripts\DontHurt.cs" />
     <Compile Include="Assets\Scripts\Earthquake_Addforce.cs" />
     <Compile Include="Assets\Scripts\EleDoorLeft.cs" />
     <Compile Include="Assets\Scripts\EleDoorLeft2.cs" />

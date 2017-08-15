@@ -8,15 +8,17 @@ public class EventStart : MonoBehaviour {
 	GameObject NPC1;
 	GameObject[] NPC2;
 	BoxCollider bc;
+	private GameObject HUD;
 
-    private void Awake()
+	private void Awake()
     {
         bc = GetComponent<BoxCollider>();
         Camera = GameObject.Find("FirstPersonCharacter");
 		//Camera = GameObject.Find("Main Camera");
 		NPC1 = GameObject.FindGameObjectWithTag("NPC1");
         NPC2 = GameObject.FindGameObjectsWithTag("NPC2");
-    }
+		HUD = GameObject.Find("HPImage");
+	}
 
     // Use this for initialization
     void Start () {
@@ -42,6 +44,7 @@ public class EventStart : MonoBehaviour {
 
 	IEnumerator EStart()
 	{
+		HUD.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
 		yield return new WaitForSeconds(10.0f);
 		Camera.SendMessage("EStart", SendMessageOptions.DontRequireReceiver);
 		yield return new WaitForSeconds(1.0f);

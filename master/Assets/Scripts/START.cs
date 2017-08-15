@@ -8,7 +8,9 @@ public class START : MonoBehaviour {
     GameObject canvas;
     GameObject Event;
     GameObject[] objects;
-    bool enable = false;
+	public GameObject damage;
+
+	bool enable = false;
 
 	private void Awake()
     {
@@ -31,7 +33,8 @@ public class START : MonoBehaviour {
             Event.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             foreach (GameObject o in objects)
                 o.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-        }
+			damage.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
+		}
     }
 
 	void Enable()

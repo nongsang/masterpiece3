@@ -48,8 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         bool canWalk = true;
         bool crouched = false;
-
-		float hp = 3.0f;
+		bool isDamage = true;
 
         // Use this for initialization
         private void Start()
@@ -279,15 +278,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             canWalk = false;
         }
-
-		void OnDamage()
-		{
-			Invoke("Damaged", 2.0f);
-		}
-
-		void Damaged()
-		{
-			SpriHPbar.localScale = new Vector3(hp -= 0.6f, 2.5f, 1);
-		}
-    }
+	}
 }
