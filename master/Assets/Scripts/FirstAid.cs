@@ -5,8 +5,8 @@ using UnityEngine;
 public class FirstAid : MonoBehaviour
 {
 
-	bool enable = true;
-	bool take = true;
+	bool enable = false;
+	bool take = false;
 
 	SpriteRenderer FirstAid1, FirstAid2;
 
