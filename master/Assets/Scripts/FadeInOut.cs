@@ -15,25 +15,32 @@ public class FadeInOut : MonoBehaviour {
 
     GameObject obj;
 
+	private void Awake()
+	{
+		obj = GameObject.Find("GoBlack");
+	}
+
 	// Use this for initialization
 	void Start () {
-        obj = GameObject.Find("Image");
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        //if (Input.GetKeyDown("space"))
-        //    fadeinout = !fadeinout;
+		//if (Input.GetKeyDown("space"))
+		//    fadeinout = !fadeinout;
 
-        if(fadeinout)
-            FadeOut();
-        else if(!fadeinout)
-            FadeIn();
-        if(fade.color.a >= 1)
-        {
-            obj.SendMessage("setImage", SendMessageOptions.DontRequireReceiver);
-        }
+		//if(fadeinout)
+		//    FadeOut();
+		//else if(!fadeinout)
+		//    FadeIn();
+		//if(fade.color.a >= 1)
+		//{
+		//    obj.SendMessage("setImage", SendMessageOptions.DontRequireReceiver);
+		//}
+
+		obj.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
     }
     void FadeIn()
     {

@@ -61,6 +61,6 @@ public class StartDamage : MonoBehaviour {
 
 	void SwitchDamage()
 	{
-		SpriHpbar.localScale = new Vector3(hp -= 1.5f, 2.5f, 1);
+		SpriHpbar.localScale = new Vector3(hp *= 0.5f, 2.5f, 1);
 	}
 }
