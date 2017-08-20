@@ -17,6 +17,7 @@ public class EventSwitch : MonoBehaviour {
     private GameObject Player;
     private GameObject goblack;
 	public GameObject Damage;
+	public GameObject Dontblock;
 
     private void Awake()
     {
@@ -51,13 +52,14 @@ public class EventSwitch : MonoBehaviour {
             Player.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             goblack.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 			Damage.SendMessage("SwitchDamage", SendMessageOptions.DontRequireReceiver);
+			Dontblock.GetComponent<SphereCollider>().enabled = true;
 
-            //Oj.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-            //foreach (GameObject o in Oj)
-            //{
-            //    o.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-            //}
-            breakerSwitch1 = false;
+			//Oj.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+			//foreach (GameObject o in Oj)
+			//{
+			//    o.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
+			//}
+			breakerSwitch1 = false;
             breakerSwitch2 = false;
             breakerSwitch3 = false;
             valve = false;

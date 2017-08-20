@@ -50,11 +50,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool crouched = false;
 		bool isDamage = true;
 
-		private void Awake()
-		{
-			DontDestroyOnLoad(transform.gameObject);
-		}
-
 		// Use this for initialization
 		private void Start()
         {
