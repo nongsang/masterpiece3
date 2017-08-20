@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartDamage : MonoBehaviour {
 
 	public Transform SpriHpbar;
-	float hp = 3.0f;
+	static float hp = 3.0f;
 	bool isDamage = true;
 	bool enable = false;
 	GameObject Die;

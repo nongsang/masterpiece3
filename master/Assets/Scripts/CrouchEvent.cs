@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CrouchEvent : MonoBehaviour {
 
-	Transform Player;
+	//Transform Player;
+
+	bool enable = false;
 
 	// Use this for initialization
 	void Start () {
-		Player = GameObject.Find("FPSController").transform;
+		//Player = GameObject.Find("FPSController").transform;
 	}
 	
 	// Update is called once per frame
@@ -18,15 +20,27 @@ public class CrouchEvent : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Player")
-			Player.localScale = new Vector3(1, 0.8f, 1);
+		if (other.tag == "Player" && enable == true)
+			other.transform.localScale = new Vector3(1, 0.8f, 1);
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
 		if(other.tag == "Player")
 		{
-			Player.localScale = new Vector3(1, 1.6f, 1);
+			other.transform.localScale = new Vector3(1, 1.6f, 1);
 		}
+		else if(other.tag == "OBJECT")
+			Enable();
+	}
+
+	private void Enable()
+	{
+		enable = true;
+	}
+
+	void Disable()
+	{
+		enable = false;
 	}
 }

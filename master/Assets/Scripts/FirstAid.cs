@@ -5,8 +5,8 @@ using UnityEngine;
 public class FirstAid : MonoBehaviour
 {
 
-	bool enable = false;
-	bool take = false;
+	public bool enable = false;
+	public bool take = false;
 
 	public GameObject FirstAid1, FirstAid2;
 
@@ -22,14 +22,18 @@ public class FirstAid : MonoBehaviour
 	void Update()
 	{
 		if (enable == true && take == true)
-		{
-			FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
+			//FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
 			//if (FirstAid1.enabled == true)
 			//	FirstAid2.enabled = true;
 			//else if (FirstAid2.enabled == true)
 			//FirstAid1.enabled = true;
 			Destroy(gameObject);
-		}
+	}
+
+	private void OnDestroy()
+	{
+		//Destroy(gameObject);
+		FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
 	}
 
 	private void Switch()
