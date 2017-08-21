@@ -51,8 +51,8 @@ public class CameraShake : MonoBehaviour {
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "BACK")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
-				else if (hit.collider.name == "GasPipe")
-					hit.collider.gameObject.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
+				else if (hit.collider.name == "GasValve")
+					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "Cover")
 					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "breakerSwitch1")
@@ -63,6 +63,8 @@ public class CameraShake : MonoBehaviour {
 					hit.collider.gameObject.SendMessage("SetRotate", SendMessageOptions.DontRequireReceiver);
 				else if (hit.collider.name == "firstAidBox")
 					Destroy(hit.collider.gameObject);
+				else if (hit.collider.name == "ElevatorButton")
+					hit.collider.gameObject.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		if (shake > 0)

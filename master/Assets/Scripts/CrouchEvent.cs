@@ -26,12 +26,15 @@ public class CrouchEvent : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other)
 	{
-		if(other.tag == "Player")
+		if (other.tag == "Player")
 		{
 			other.transform.localScale = new Vector3(1, 1.6f, 1);
 		}
-		else if(other.tag == "OBJECT")
+		else if (other.tag == "OBJECT")
+		{
 			Enable();
+			Invoke("Disable", 20);
+		}
 	}
 
 	private void Enable()

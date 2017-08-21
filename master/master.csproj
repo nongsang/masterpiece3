@@ -76,6 +76,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Google.ProtocolBuffers">
       <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
@@ -338,6 +344,7 @@
     <Compile Include="Assets\Scripts\breakerSwitch1.cs" />
     <Compile Include="Assets\Scripts\breakerSwitch2.cs" />
     <Compile Include="Assets\Scripts\breakerSwitch3.cs" />
+    <Compile Include="Assets\Scripts\dontblock.cs" />
     <Compile Include="Assets\ZRNAssets\Cars\Scripts\AICarMove.cs" />
   </ItemGroup>
   <ItemGroup>

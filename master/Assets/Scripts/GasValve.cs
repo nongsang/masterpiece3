@@ -13,19 +13,9 @@ public class GasValve : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
 
-		
+    void Enable()
+    {
+		obj.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
 	}
-
-    private void OnMouseDown()
-    {
-        if(enable)
-            obj.SendMessage("setValveRotate", SendMessageOptions.DontRequireReceiver);
-    }
-
-    void Switch()
-    {
-        enable = true;
-    }
 }

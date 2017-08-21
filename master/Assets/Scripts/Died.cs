@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Died : MonoBehaviour {
 
-    float timecost = 3.0f;
+    float timecost = 5.0f;
     Image im;
+	bool enable = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,19 +17,23 @@ public class Died : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (im.enabled)
+        if (enable)
         {
             timecost -= Time.deltaTime;
+			if (timecost <= 3.0f)
+				im.enabled = true;
             if(timecost <= 0)
-            {
                 Application.Quit();
-            }
         }
 	}
 
-    void setImage()
+    void Die()
     {
-        
         im.enabled = true;
     }
+
+	void Enable()
+	{
+		enable = true;
+	}
 }

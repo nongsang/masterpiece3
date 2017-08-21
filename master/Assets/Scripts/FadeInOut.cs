@@ -6,19 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class FadeInOut : MonoBehaviour {
 
-    public UnityEngine.UI.Image fade;   // 맨 앞의 이미지
+    public Image fade;   // 맨 앞의 이미지
     float fades = 0.0f; // 알파값 1 == 255, 0 ~ 1 사용가능
 
     float time = 0;
 
     bool fadeinout = false; // 스위치
 
-    GameObject obj;
-
-	private void Awake()
-	{
-		obj = GameObject.Find("GoBlack");
-	}
+    public GameObject obj;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +27,7 @@ public class FadeInOut : MonoBehaviour {
 		//    fadeinout = !fadeinout;
 
 		//if(fadeinout)
-		//    FadeOut();
+		    FadeOut();
 		//else if(!fadeinout)
 		//    FadeIn();
 		//if(fade.color.a >= 1)
@@ -40,7 +35,7 @@ public class FadeInOut : MonoBehaviour {
 		//    obj.SendMessage("setImage", SendMessageOptions.DontRequireReceiver);
 		//}
 
-		obj.SendMessage("Die", SendMessageOptions.DontRequireReceiver);
+		obj.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);
     }
     void FadeIn()
     {

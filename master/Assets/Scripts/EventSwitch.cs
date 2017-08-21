@@ -63,6 +63,7 @@ public class EventSwitch : MonoBehaviour {
             breakerSwitch2 = false;
             breakerSwitch3 = false;
             valve = false;
+			StartCoroutine(dontblock());
         }
     }
 
@@ -71,6 +72,12 @@ public class EventSwitch : MonoBehaviour {
     //    if (breaker1 & breaker2 & breaker3 & valve == true)
     //        return true;
     //}
+
+	IEnumerator dontblock()
+	{
+		yield return new WaitForSeconds(6.0f);
+		Dontblock.GetComponent<SphereCollider>().enabled = false;
+	}
 
     public void SetBreakerSwitch1()
     {

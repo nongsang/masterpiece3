@@ -30,16 +30,16 @@ public class ElevatorButton : MonoBehaviour {
 		
 	}
 
-    private void OnMouseDown()
-    {
-        if (eventOn)
-        {
-            mr.enabled = false;
-            obj.SendMessage("setOnMeshRender", SendMessageOptions.DontRequireReceiver);
-            Eobj1.SendMessage("setDoorState", SendMessageOptions.DontRequireReceiver);
-            Eobj2.SendMessage("setDoorState", SendMessageOptions.DontRequireReceiver);
-        }
-    }
+	void Switch()
+	{
+		if (eventOn)
+		{
+			mr.enabled = false;
+			obj.SendMessage("setOnMeshRender", SendMessageOptions.DontRequireReceiver);
+			Eobj1.SendMessage("setDoorState", SendMessageOptions.DontRequireReceiver);
+			Eobj2.SendMessage("setDoorState", SendMessageOptions.DontRequireReceiver);
+		}
+	}
 
     private void Enable()
     {
