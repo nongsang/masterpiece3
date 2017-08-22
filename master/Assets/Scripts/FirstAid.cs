@@ -34,7 +34,7 @@ public class FirstAid : MonoBehaviour
 	{
 		//Destroy(gameObject);
 		//FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
-		Save.GetComponent<Save>().SaveFirstAid1 = true;
+		//Save.GetComponent<Save>().SaveFirstAid1 = true;
 	}
 
 	private void Switch()

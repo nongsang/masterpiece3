@@ -289,7 +289,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		void GetFirstAid2()
 		{
-			FirstAid2 = true;
+			//FirstAid2 = true;
 		}
 	}
 }
