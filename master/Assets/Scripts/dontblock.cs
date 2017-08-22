@@ -15,16 +15,4 @@ public class dontblock : MonoBehaviour {
 	void Update () {
 		//sc.enabled = false;
 	}
-
-	private void OnCollisionEnter(Collision collision)
-	{
-		if (collision.collider.name == "FPSController")
-			sc.enabled = false;
-	}
-
-	private void OnCollisionExit(Collision collision)
-	{
-		if (collision.collider.name == "FPSController")
-			sc.enabled = true;
-	}
 }

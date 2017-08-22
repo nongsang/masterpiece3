@@ -50,8 +50,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool crouched = false;
 		bool isDamage = true;
 
-		static bool FirstAid1 = false;
-		static bool FirstAid2 = false;
+		bool FirstAid1 = false;
+		bool FirstAid2 = false;
 
 		// Use this for initialization
 		private void Start()

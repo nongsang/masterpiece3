@@ -8,7 +8,7 @@ public class FirstAid : MonoBehaviour
 	public bool enable = false;
 	public bool take = false;
 
-	public GameObject FirstAid1, FirstAid2;
+	public GameObject Save;
 
 	// Use this for initialization
 	void Start()
@@ -33,7 +33,8 @@ public class FirstAid : MonoBehaviour
 	private void OnDestroy()
 	{
 		//Destroy(gameObject);
-		FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
+		//FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
+		Save.GetComponent<Save>().SaveFirstAid1 = true;
 	}
 
 	private void Switch()

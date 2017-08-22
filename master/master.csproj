@@ -338,6 +338,8 @@
     <Compile Include="Assets\Scripts\NPC2.cs" />
     <Compile Include="Assets\Scripts\PartitionCtrl.cs" />
     <Compile Include="Assets\Scripts\START.cs" />
+    <Compile Include="Assets\Scripts\Save.cs" />
+    <Compile Include="Assets\Scripts\SpriteFirstAid1.cs" />
     <Compile Include="Assets\Scripts\Talk.cs" />
     <Compile Include="Assets\Scripts\breakerCover.cs" />
     <Compile Include="Assets\Scripts\breakerSwitch.cs" />
