@@ -9,6 +9,7 @@ public class StartDamage : MonoBehaviour {
 	bool isDamage = true;
 	bool enable = false;
 	GameObject Die;
+	public GameObject Save;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class StartDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Save.GetComponent<Save>().Savehp = hp;
 		if (SpriHpbar.localScale.x <= 0.3f)
 		{
 			SpriHpbar.localScale = new Vector3(0.0f, 2.5f, 1);

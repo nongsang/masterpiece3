@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Save : MonoBehaviour {
 
-	GameObject FirstAid1, FirstAid2, hp;
-	public static bool SaveFirstAid1, SaveFirstAid2;
-	public static float Savehp = 3.0f;
+	public GameObject FirstAid1, FirstAid2, hp;
+	public bool SaveFirstAid1, SaveFirstAid2;
+	public float Savehp = 3.0f;
+	public bool SaveNPC1, SaveNPC2;
+
+	public static Save instance = null;
 
 	private void Awake()
 	{
 		DontDestroyOnLoad(gameObject);
+		instance = this;
 	}
 
 	// Use this for initialization
