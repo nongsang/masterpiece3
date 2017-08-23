@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Save : MonoBehaviour {
 
@@ -20,9 +21,7 @@ public class Save : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		FirstAid1 = GameObject.Find("FirstAid1");
-		FirstAid2 = GameObject.Find("FirstAid2");
-		hp = GameObject.Find("HPImage");
+		StartCoroutine(Init());
 	}
 
 	private void Update()
@@ -37,5 +36,35 @@ public class Save : MonoBehaviour {
 			FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
 		if (SaveFirstAid2 == true)
 			FirstAid2.GetComponent<SpriteRenderer>().enabled = true;
+
+		//if (scenemanager.getactivescene().name == "road")
+		//{
+		//	firstaid1 = gameobject.find("firstaid1");
+		//	firstaid2 = gameobject.find("firstaid2");
+		//	hp = gameobject.find("hpimage");
+		//	debug.log("바보");
+		//}
+	}
+
+	//void SaveHP(float HP)
+	//{
+	//	Savehp = HP;
+	//}
+
+	IEnumerator Init()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(0.2f);
+			FirstAid1 = GameObject.Find("FirstAid1");
+			FirstAid2 = GameObject.Find("FirstAid2");
+			hp = GameObject.Find("HPImage");
+
+			if (SaveFirstAid1 == true)
+				FirstAid1.GetComponent<SpriteRenderer>().enabled = true;
+			if (SaveFirstAid2 == true)
+				FirstAid2.GetComponent<SpriteRenderer>().enabled = true;
+			//Savehp = HP;
+		}
 	}
 }

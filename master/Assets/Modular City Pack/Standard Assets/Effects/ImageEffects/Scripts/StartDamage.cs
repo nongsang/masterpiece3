@@ -13,13 +13,16 @@ public class StartDamage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//SpriHpbar.localScale = new Vector3(Save.GetComponent<Save>().Savehp, 2.5f, 1);
 		Die = GameObject.Find("GoBlack");
+		Save = GameObject.Find("Save");
+		SpriHpbar.localScale = new Vector3(Save.GetComponent<Save>().Savehp, 2.5f, 1);
 		StartCoroutine(OnDamage());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Save.GetComponent<Save>().Savehp = hp;
+		//Save.SendMessage("SaveHP", hp,SendMessageOptions.DontRequireReceiver);
 		if (SpriHpbar.localScale.x <= 0.3f)
 		{
 			SpriHpbar.localScale = new Vector3(0.0f, 2.5f, 1);
@@ -64,5 +67,6 @@ public class StartDamage : MonoBehaviour {
 	void SwitchDamage()
 	{
 		SpriHpbar.localScale = new Vector3(hp *= 0.5f, 2.5f, 1);
+		Save.GetComponent<Save>().Savehp = hp;
 	}
 }

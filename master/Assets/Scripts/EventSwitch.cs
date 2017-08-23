@@ -52,7 +52,7 @@ public class EventSwitch : MonoBehaviour {
             Player.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
             goblack.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 			Damage.SendMessage("SwitchDamage", SendMessageOptions.DontRequireReceiver);
-			Dontblock.GetComponent<SphereCollider>().enabled = true;
+			Dontblock.GetComponent<BoxCollider>().enabled = true;
 
 			//Oj.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
 			//foreach (GameObject o in Oj)
@@ -76,7 +76,7 @@ public class EventSwitch : MonoBehaviour {
 	IEnumerator dontblock()
 	{
 		yield return new WaitForSeconds(6.0f);
-		Dontblock.GetComponent<SphereCollider>().enabled = false;
+		Dontblock.GetComponent<BoxCollider>().enabled = false;
 	}
 
     public void SetBreakerSwitch1()
