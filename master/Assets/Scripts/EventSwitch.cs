@@ -21,7 +21,8 @@ public class EventSwitch : MonoBehaviour {
 
     private void Awake()
     {
-        Camera = GameObject.Find("FirstPersonCharacter");
+		System.GC.Collect();
+		Camera = GameObject.Find("FirstPersonCharacter");
         elevator = GameObject.Find("ElevatorButton");
         Exit = GameObject.Find("ExitTarget");
         Player = GameObject.Find("FPSController");

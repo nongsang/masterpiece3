@@ -11,6 +11,11 @@ public class NPC2 : MonoBehaviour {
 
 	bool on = false;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
 	void Start () {
         nav = GetComponent<NavMeshAgent>();

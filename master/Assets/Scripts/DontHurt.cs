@@ -6,15 +6,20 @@ public class DontHurt : MonoBehaviour {
 
 	public GameObject damage;
 
-	// Use this for initialization
-	void Start () {
-		
+	private void Awake()
+	{
+		System.GC.Collect();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	//// Use this for initialization
+	//void Start () {
+
+	//}
+
+	//// Update is called once per frame
+	//void Update () {
+
+	//}
 
 	private void OnTriggerEnter(Collider other)
 	{

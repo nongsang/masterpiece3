@@ -36,6 +36,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			float yRot = Input.GetAxis("Right Trigger X") * XSensitivity;
 			float xRot = Input.GetAxis("Right Trigger Y") * YSensitivity;
 
+			//float yRot = Input.GetAxis("Right Trigger X") * 1.5f;
+			//float xRot = Input.GetAxis("Right Trigger Y") * 1.5f;
+
 			m_CharacterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
 			m_CameraTargetRot *= Quaternion.Euler(xRot, 0f, 0f);
 

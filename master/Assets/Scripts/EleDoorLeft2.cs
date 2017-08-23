@@ -13,8 +13,13 @@ public class EleDoorLeft2 : MonoBehaviour {
 
     GameObject panal;
 
-    // Use this for initialization
-    void Start()
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
+	// Use this for initialization
+	void Start()
     {
         //Debug.Log(transform.position.x);
         panal = GameObject.Find("FirstPersonCharacter");

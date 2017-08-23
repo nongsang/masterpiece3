@@ -11,11 +11,16 @@ public class Hurt : MonoBehaviour {
 	void Start () {
 		Player = GameObject.Find("FPSController");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void Awake()
+	{
+		System.GC.Collect();
 	}
+
+	// Update is called once per frame
+	//void Update () {
+
+	//}
 
 	private void OnTriggerStay(Collider other)
 	{

@@ -8,18 +8,19 @@ public class PartitionCtrl : MonoBehaviour {
 
     private void Awake()
     {
-        partition = GetComponent<Rigidbody>();
+		System.GC.Collect();
+		partition = GetComponent<Rigidbody>();
     }
 
     // Use this for initialization
-    void Start () {
+ //   void Start () {
 
-	}
+	//}
 	
-	// Update is called once per frame
-	void Update () {
+	//// Update is called once per frame
+	//void Update () {
 
-	}
+	//}
 
     void Earthquake()
     {

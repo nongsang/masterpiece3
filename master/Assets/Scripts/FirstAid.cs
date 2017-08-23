@@ -10,6 +10,11 @@ public class FirstAid : MonoBehaviour
 
 	public GameObject Save;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
 	void Start()
 	{

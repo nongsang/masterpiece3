@@ -7,6 +7,11 @@ public class breakerSwitch1 : MonoBehaviour {
     bool setRotation, enable = false;
     public GameObject ES;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
 	void Start () {
         //Debug.Log(transform.rotation.z);

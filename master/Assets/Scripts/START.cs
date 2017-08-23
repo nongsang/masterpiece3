@@ -14,7 +14,8 @@ public class START : MonoBehaviour {
 
 	private void Awake()
     {
-        start = GameObject.Find("START");
+		System.GC.Collect();
+		start = GameObject.Find("START");
         canvas = GameObject.Find("Canvas");
         Event = GameObject.Find("EventStart");
         objects = GameObject.FindGameObjectsWithTag("OBJECT");

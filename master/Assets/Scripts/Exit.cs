@@ -9,6 +9,11 @@ public class Exit : MonoBehaviour
 	GameObject obj;
 	bool enable = false;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
 	void Start()
 	{

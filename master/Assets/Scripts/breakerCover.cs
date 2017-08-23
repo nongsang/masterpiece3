@@ -7,12 +7,16 @@ public class breakerCover : MonoBehaviour {
     bool setRotation = false;
     public float rotationSpeed = 100.0f;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
+	//void Start () {
+
+	//}
+
 	// Update is called once per frame
 	void Update () {
         if (setRotation)

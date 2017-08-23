@@ -6,15 +6,20 @@ public class ElevatorButtonDown : MonoBehaviour {
 
     MeshRenderer mr;
 
-    // Use this for initialization
-    void Start () {
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
+	// Use this for initialization
+	void Start () {
         mr = GetComponent<MeshRenderer>();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	//void Update () {
 		
-	}
+	//}
 
     public void setOnMeshRender()
     {

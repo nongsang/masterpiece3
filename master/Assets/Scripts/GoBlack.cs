@@ -16,14 +16,15 @@ public class GoBlack : MonoBehaviour
 
     private void Awake()
     {
-        goBlack = GetComponent<Image>();
+		System.GC.Collect();
+		goBlack = GetComponent<Image>();
     }
 
     // Use this for initialization
-    void Start()
-    {
+    //void Start()
+    //{
 
-    }
+    //}
 
     // Update is called once per frame
     void Update()

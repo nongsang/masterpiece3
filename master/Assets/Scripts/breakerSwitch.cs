@@ -6,11 +6,17 @@ public class breakerSwitch : MonoBehaviour {
 
     bool setRotation;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
-	void Start () {
-        //Debug.Log(transform.rotation.z);
-    }
-	
+	//void Start()
+	//{
+	//	Debug.Log(transform.rotation.z);
+	//}
+
 	// Update is called once per frame
 	void Update () {
         if (setRotation)

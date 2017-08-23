@@ -8,8 +8,13 @@ public class breakerSwitch3 : MonoBehaviour
     bool setRotation, enable = false;
     GameObject ES;
 
-    // Use this for initialization
-    void Start()
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
+	// Use this for initialization
+	void Start()
     {
         //Debug.Log(transform.rotation.z);
         ES = GameObject.Find("EventSwitch");

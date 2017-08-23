@@ -8,15 +8,22 @@ public class CrouchEvent : MonoBehaviour {
 
 	bool enable = false;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
-	void Start () {
-		//Player = GameObject.Find("FPSController").transform;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	//void Start()
+	//{
+	//	Player = GameObject.Find("FPSController").transform;
+	//}
+
+	//Update is called once per frame
+	//void Update()
+	//{
+
+	//}
 
 	private void OnTriggerEnter(Collider other)
 	{

@@ -8,8 +8,13 @@ public class GasPipe : MonoBehaviour {
     public float rotationSpeed = 200.0f;
     GameObject ES;
 
-    // Use this for initialization
-    void Start () {
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
+	// Use this for initialization
+	void Start () {
         ES = GameObject.Find("EventSwitch");
 	}
 	

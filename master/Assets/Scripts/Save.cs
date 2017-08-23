@@ -14,6 +14,7 @@ public class Save : MonoBehaviour {
 
 	private void Awake()
 	{
+		System.GC.Collect();
 		DontDestroyOnLoad(gameObject);
 		instance = this;
 	}

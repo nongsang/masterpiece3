@@ -11,6 +11,11 @@ public class StartDamage : MonoBehaviour {
 	GameObject Die;
 	public GameObject Save;
 
+	private void Awake()
+	{
+		System.GC.Collect();
+	}
+
 	// Use this for initialization
 	void Start () {
 		//SpriHpbar.localScale = new Vector3(Save.GetComponent<Save>().Savehp, 2.5f, 1);

@@ -11,24 +11,25 @@ public class ElevatorButton : MonoBehaviour {
 
     private void Awake()
     {
-        mr = GetComponent<MeshRenderer>();
+		System.GC.Collect();
+		mr = GetComponent<MeshRenderer>();
         obj = GameObject.Find("ElevatorButtonDown");
         Eobj1 = GameObject.Find("EleDoorLeft");
         Eobj2 = GameObject.Find("EleDoorRight");
     }
 
     // Use this for initialization
-    void Start () {
-        //mr = GetComponent<MeshRenderer>();
-        //obj = GameObject.Find("ElevatorButtonDown");
-        //Eobj1 = GameObject.Find("EleDoorLeft");
-        //Eobj2 = GameObject.Find("EleDoorRight");
-    }
+    //void Start () {
+    //    //mr = GetComponent<MeshRenderer>();
+    //    //obj = GameObject.Find("ElevatorButtonDown");
+    //    //Eobj1 = GameObject.Find("EleDoorLeft");
+    //    //Eobj2 = GameObject.Find("EleDoorRight");
+    //}
 	
 	// Update is called once per frame
-	void Update () {
+	//void Update () {
 		
-	}
+	//}
 
 	void Switch()
 	{

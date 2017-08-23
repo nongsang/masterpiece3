@@ -17,7 +17,8 @@ public class CameraShake : MonoBehaviour {
 
     void Awake()
     {
-        if (camTransform == null)
+		System.GC.Collect();
+		if (camTransform == null)
         {
             camTransform = GetComponent<Transform>();
         }
