@@ -79,6 +79,9 @@
     <Reference Include="Google.ProtocolBuffers">
       <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>Assets\MeshBaker\scripts\MeshBakerCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="master.Plugins.csproj">
@@ -200,6 +203,27 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB2_UpdateSkinnedMeshBoundsFromBones.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB2_UpdateSkinnedMeshBoundsFromBounds.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_BatchPrefabBaker.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_BoneWeightCopier.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_DisableHiddenAnimations.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MBVersionConcrete.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MeshBaker.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MeshBakerCommon.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MeshBakerGrouper.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MeshBakerRoot.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_MultiMeshBaker.cs" />
+    <Compile Include="Assets\MeshBaker\scripts\MB3_TextureBaker.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyAfterTime.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnParticlesDead.cs" />
@@ -361,6 +385,10 @@
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
+    <None Include="Assets\MeshBaker\Release Notes.txt" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
+    <None Include="Assets\MeshBaker\docs\README.txt" />
     <None Include="Assets\Modular City Pack\Materials\Alpha-Diffuse.shader" />
     <None Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Modular City Pack\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
