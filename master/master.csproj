@@ -82,11 +82,11 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Google.ProtocolBuffers">
-      <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
-    </Reference>
     <Reference Include="MeshBakerCore">
       <HintPath>Assets\MeshBaker\scripts\MeshBakerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -357,6 +357,7 @@
     <Compile Include="Assets\Scripts\GoBlack.cs" />
     <Compile Include="Assets\Scripts\Hurt.cs" />
     <Compile Include="Assets\Scripts\InteractionTest.cs" />
+    <Compile Include="Assets\Scripts\LoadG.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\Scripts\NPC2.cs" />
