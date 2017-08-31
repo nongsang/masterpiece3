@@ -30,11 +30,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void LookRotation(Transform character, Transform camera)
         {
-			//float yRot = Input.GetAxis("Mouse X") * XSensitivity;
-			//float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
+			float yRot = Input.GetAxis("Mouse X") * XSensitivity;
+			float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
 
-			float yRot = Input.GetAxis("Right Trigger X") * XSensitivity;
-			float xRot = Input.GetAxis("Right Trigger Y") * YSensitivity;
+			//float yRot = Input.GetAxis("Right Trigger X") * XSensitivity;
+			//float xRot = Input.GetAxis("Right Trigger Y") * YSensitivity;
 
 			//float yRot = Input.GetAxis("Right Trigger X") * 1.5f;
 			//float xRot = Input.GetAxis("Right Trigger Y") * 1.5f;
