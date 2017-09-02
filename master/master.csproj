@@ -395,6 +395,7 @@
     <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\Scripts\NPC2.cs" />
     <Compile Include="Assets\Scripts\PartitionCtrl.cs" />
+    <Compile Include="Assets\Scripts\RunNPC.cs" />
     <Compile Include="Assets\Scripts\START.cs" />
     <Compile Include="Assets\Scripts\Save.cs" />
     <Compile Include="Assets\Scripts\SpriteFirstAid1.cs" />
