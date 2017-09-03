@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Road.unity
+- path: Assets/GwangHwaMoon.unity
   isLoaded: 1
   isActive: 1
