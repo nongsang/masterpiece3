@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class GoBlack : MonoBehaviour
 {
 
-    Image goBlack;
-	public Image die;
+    SpriteRenderer goBlack;
+	public SpriteRenderer die;
     private float fade = 1.0f;
     public float time = 6.0f;
 
@@ -17,7 +17,7 @@ public class GoBlack : MonoBehaviour
     private void Awake()
     {
 		System.GC.Collect();
-		goBlack = GetComponent<Image>();
+		goBlack = GetComponent<SpriteRenderer>();
     }
 
     // Use this for initialization
