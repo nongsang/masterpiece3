@@ -389,10 +389,11 @@
     <Compile Include="Assets\Scripts\Hurt.cs" />
     <Compile Include="Assets\Scripts\InteractionTest.cs" />
     <Compile Include="Assets\Scripts\LoadG.cs" />
-    <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\Scripts\NPC2.cs" />
     <Compile Include="Assets\Scripts\PartitionCtrl.cs" />
+    <Compile Include="Assets\Scripts\RNPC1.cs" />
+    <Compile Include="Assets\Scripts\RNPC2.cs" />
     <Compile Include="Assets\Scripts\RunNPC.cs" />
     <Compile Include="Assets\Scripts\START.cs" />
     <Compile Include="Assets\Scripts\Save.cs" />
