@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GoBlack : MonoBehaviour
 {
-
+	public GameObject Player;
     SpriteRenderer goBlack;
 	public SpriteRenderer die;
     private float fade = 1.0f;
@@ -50,6 +50,7 @@ public class GoBlack : MonoBehaviour
 	void Die()
 	{
 		goBlack.color = new Color(0, 0, 0, 1);
+		Player.GetComponent<CharacterController>().enabled = false;
 		Invoke("ShowDie", 1);
 	}
 

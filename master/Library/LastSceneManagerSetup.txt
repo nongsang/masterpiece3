@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/office.unity
+- path: Assets/Road.unity
   isLoaded: 1
   isActive: 1

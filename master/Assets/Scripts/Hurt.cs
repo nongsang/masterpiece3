@@ -2,47 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hurt : MonoBehaviour {
+public class Hurt : MonoBehaviour
+{
 
-	GameObject Player;
-	bool enable = true;
+	public GameObject HPImage;
 
 	// Use this for initialization
-	void Start () {
-		Player = GameObject.Find("FPSController");
-	}
-
-	private void Awake()
+	void Start()
 	{
-		System.GC.Collect();
+
 	}
 
 	// Update is called once per frame
-	//void Update () {
-
-	//}
-
-	private void OnTriggerStay(Collider other)
+	void Update()
 	{
-		if (enable == false)
-			StopAllCoroutines();
-		else if(other.tag == "Player")
-		{
-			StartCoroutine(WaitTwoSeconds());
-		}
+
 	}
 
-	IEnumerator WaitTwoSeconds()
+	void OnTriggerEnter(Collider other)
 	{
-		yield return new WaitForSeconds(2.0f);
-		Player.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
-		yield return new WaitForSeconds(2.0f);
-		Player.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
-		yield return new WaitForSeconds(2.0f);
-		Player.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
-		yield return new WaitForSeconds(2.0f);
-		Player.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
-		yield return new WaitForSeconds(2.0f);
-		Player.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
+		if(other.tag == "Player")
+		HPImage.SendMessage("Hurt", SendMessageOptions.DontRequireReceiver);
 	}
 }

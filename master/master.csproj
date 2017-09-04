@@ -379,11 +379,13 @@
     <Compile Include="Assets\Scripts\FadeInOut.cs" />
     <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\FirstAid.cs" />
+    <Compile Include="Assets\Scripts\FirstAid2.cs" />
     <Compile Include="Assets\Scripts\GasPipe.cs" />
     <Compile Include="Assets\Scripts\GasValve.cs" />
     <Compile Include="Assets\Scripts\Give.cs" />
     <Compile Include="Assets\Scripts\GoBlack.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
+    <Compile Include="Assets\Scripts\Hult.cs" />
     <Compile Include="Assets\Scripts\Hurt.cs" />
     <Compile Include="Assets\Scripts\InteractionTest.cs" />
     <Compile Include="Assets\Scripts\LoadG.cs" />

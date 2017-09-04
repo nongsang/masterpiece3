@@ -39,12 +39,12 @@ public class CameraShake : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.DrawRay(tr.position, tr.forward * 3.0f, Color.green);
+		Debug.DrawRay(tr.position, tr.forward * 3.0f, Color.green);
 		if (Input.GetButtonDown("Fire1"))
 		{
 			RaycastHit hit;
 
-			if (Physics.Raycast(tr.position, tr.forward, out hit, 5.0f))
+			if (Physics.Raycast(tr.position, tr.forward, out hit, 6.0f))
 			{
 				if (hit.collider.name == "START")
 					hit.collider.gameObject.SendMessage("Enable", SendMessageOptions.DontRequireReceiver);

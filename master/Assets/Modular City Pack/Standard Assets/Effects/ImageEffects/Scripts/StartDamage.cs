@@ -8,8 +8,10 @@ public class StartDamage : MonoBehaviour {
 	static float hp = 3.0f;
 	bool isDamage = true;
 	bool enable = false;
-	GameObject Die;
+	public GameObject Die;
 	public GameObject Save;
+
+	bool isHurt = false;
 
 	private void Awake()
 	{
@@ -52,6 +54,11 @@ public class StartDamage : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	void Hurt()
+	{
+		SpriHpbar.localScale = new Vector3(hp -= 0.3f, 2.5f, 1);
 	}
 
 	private void Enable()
