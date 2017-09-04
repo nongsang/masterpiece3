@@ -28,6 +28,13 @@ public class Goal : MonoBehaviour {
 		fade += 0.5f * Time.deltaTime;
 		Finish1.color = new Color(0, 0, 0, fade);
 		Finish2.color = new Color(0, 0, 0, fade);
+		Invoke("quit", 4.0f);
+	}
+
+	private void quit()
+	{
+		Application.Quit();
+		Debug.Log("꺼짐");
 	}
 
 	private void OnTriggerEnter(Collider other)

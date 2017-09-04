@@ -22,6 +22,6 @@ public class RNPC2 : MonoBehaviour
 	void IsHeal()
 	{
 		FirstAid2.GetComponent<SpriteRenderer>().enabled = false;
-		Save.GetComponent<Save>().SaveFirstAid1 = false;
+		Save.GetComponent<Save>().SaveFirstAid2 = false;
 	}
 }
