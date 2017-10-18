@@ -19,6 +19,9 @@ public class EventSwitch : MonoBehaviour {
 	public GameObject Damage;
 	public GameObject Dontblock;
 
+	public AudioClip eq;
+	private AudioSource source;
+
     private void Awake()
     {
 		System.GC.Collect();
@@ -31,12 +34,12 @@ public class EventSwitch : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //Oj = GameObject.FindWithTag("Mug");
-        //Oj = GameObject.FindGameObjectsWithTag("OBJECT");
+		//Oj = GameObject.FindWithTag("Mug");
+		//Oj = GameObject.FindGameObjectsWithTag("OBJECT");
 
-        //Camera = GameObject.Find("FirstPersonCharacter");
-        //elevator = GameObject.Find("ElevatorButton");
-
+		//Camera = GameObject.Find("FirstPersonCharacter");
+		//elevator = GameObject.Find("ElevatorButton");
+		source = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -76,7 +79,9 @@ public class EventSwitch : MonoBehaviour {
 
 	IEnumerator dontblock()
 	{
-		yield return new WaitForSeconds(6.0f);
+		//yield return new WaitForSeconds(0.5f);
+		source.PlayOneShot(eq, 1.0f);
+		yield return new WaitForSeconds(5.0f);
 		Dontblock.GetComponent<BoxCollider>().enabled = false;
 	}
 

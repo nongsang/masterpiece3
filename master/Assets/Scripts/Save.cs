@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Save : MonoBehaviour {
 
 	public GameObject FirstAid1, FirstAid2, hp;
+	//public GameObject NPC1, NPC2;
 	public bool SaveFirstAid1, SaveFirstAid2;
 	public float Savehp = 3.0f;
 	public bool SaveNPC1, SaveNPC2;

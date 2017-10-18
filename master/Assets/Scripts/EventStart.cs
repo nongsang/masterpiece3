@@ -10,6 +10,9 @@ public class EventStart : MonoBehaviour {
 	BoxCollider bc;
 	private GameObject HUD;
 
+	public AudioClip eq;
+	private AudioSource source;
+
 	private void Awake()
     {
 		System.GC.Collect();
@@ -27,6 +30,7 @@ public class EventStart : MonoBehaviour {
 		//Camera = GameObject.Find("FirstPersonCharacter");
 		//NPC1 = GameObject.FindGameObjectWithTag("NPC1");
 		//NPC2 = GameObject.FindGameObjectsWithTag("NPC2");
+		source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -47,6 +51,7 @@ public class EventStart : MonoBehaviour {
 	{
 		HUD.SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
 		yield return new WaitForSeconds(10.0f);
+		source.PlayOneShot(eq, 1.0f);
 		Camera.SendMessage("EStart", SendMessageOptions.DontRequireReceiver);
 		yield return new WaitForSeconds(1.0f);
 		NPC1.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);

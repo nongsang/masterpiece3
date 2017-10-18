@@ -66,8 +66,8 @@ public class CameraShake : MonoBehaviour {
 					Destroy(hit.collider.gameObject);
 				else if (hit.collider.name == "ElevatorButton")
 					hit.collider.gameObject.SendMessage("Switch", SendMessageOptions.DontRequireReceiver);
-				else if (hit.collider.tag == "NPC")
-					hit.collider.gameObject.SendMessage("IsHeal", 1);
+				else if (hit.collider.CompareTag("NPC") || hit.collider.CompareTag("NPC1"))
+					hit.collider.gameObject.SendMessage("SetRun", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		if (shake > 0)

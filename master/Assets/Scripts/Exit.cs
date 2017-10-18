@@ -28,21 +28,20 @@ public class Exit : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "NPC1")
+		if (other.CompareTag("NPC1"))
 		{
-
 			obj = GameObject.FindWithTag("NPC1").GetComponent<NPC1>().getGameObject();
 			GameObject.Destroy(obj);
 		}
-		else if (other.tag == "NPC2")
+		else if (other.CompareTag("NPC2"))
 		{
 			obj = GameObject.FindWithTag("NPC2").GetComponent<NPC2>().getGameObject();
 			GameObject.Destroy(obj);
 		}
-		else if (other.tag == "Player" && enable)
+		else if (other.CompareTag("Player") && enable)
 		{
 			SceneManager.LoadScene("Road");
-			other.transform.position = new Vector3(-7.09f, 1.44f, -55.4f);
+			//other.transform.position = new Vector3(-7.09f, 1.44f, -55.4f);
 		}
 	}
 
